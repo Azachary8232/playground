@@ -10,13 +10,9 @@
 </head>
 <body>
     <h1 style="text-align: center; margin-top: 100px">Welcome!</h1>
-    <div style="display: flex; margin: auto; margin-top: 100px; width: 75%; height: 300px">
-        <!-- Container -->
-        <div style="flex: 1; background-color: lightblue; margin: 15px; border: 3px solid black;"></div>
-        <div style="flex: 1; background-color: lightblue; margin: 15px; border: 3px solid black;"></div>
-        <div style="flex: 1; background-color: lightblue; margin: 15px; border: 3px solid black;"></div>
-    </div>
-
+    {% for x in range(0,num): %}
+        <div style="width: 200px; height: 200px; display: inline-block; background-color: {{color}}; margin: 15px; text-align: center; border: 3px solid black;"></div>
+    {% endfor %}
 
 </body>
 </html>

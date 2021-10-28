@@ -9,5 +9,13 @@ def hello_world():
 def box_3():
     return render_template('index.html')
 
+@app.route('/play/<int:num>')
+def box_x(num):
+    return render_template('index.html', num=num)
+
+@app.route('/play/<int:num>/<string:color>')
+def box_x_color(num, color):
+    return render_template('index.html', num=num, color=color)
+
 if __name__=="__main__":
     app.run(debug=True)
